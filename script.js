@@ -1,5 +1,17 @@
 function minDate(dates) {
   //write you code here
+	let minDate=dates[0]
+	for(let i=1;i<dates.length;i++){
+		let currentSplittedDate = dates[i].split("/")
+		let minDateSplitted = minDate.split("/")
+		if(currentSplittedDate[0]<minDateSplitted[0] || 
+		   currentSplittedDate[1]<minDateSplitted[1] || 
+		  currentSplittedDate[2]<minDateSplitted[2]){
+			
+			minDate=dates[i]
+		}
+	}
+	return minDate
 }
 
 // Do not change the code
